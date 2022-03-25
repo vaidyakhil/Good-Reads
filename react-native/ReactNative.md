@@ -9,7 +9,11 @@
 
 - [React native architecture, current and new, Parshuram - maintainer](https://www.youtube.com/watch?v=UcqRXTriUVI&t=1550s)
 
+- [Native Views, android](https://reactnative.dev/docs/native-components-android)
+
 - [Native Modules](https://reactnative.dev/docs/native-modules-intro) and [Android specific](https://reactnative.dev/docs/native-modules-android)
+
+- [Native Modules, bridge, 2 way communication](https://levelup.gitconnected.com/react-native-events-in-gory-details-what-happens-on-the-way-to-listeners-2cee6c55940c)
 
 - [GREAT SERIES -> animations in RN, eveningKid](https://www.youtube.com/watch?v=TyZtrS0_bi0&list=PLiVL41zTt2lIIdZvWBwzoCjOb84DKtOX6)
 
