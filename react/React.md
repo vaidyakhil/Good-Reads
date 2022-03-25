@@ -1,5 +1,5 @@
 ## GoodReads
-- [Use of frameworks vs vannila JS, Html, CSS and what makes up the choice]("https://stackoverflow.blog/2020/02/03/is-it-time-for-a-front-end-framework/")
+- [Use of frameworks vs vannila JS, Html, CSS and what makes up the choice](https://stackoverflow.blog/2020/02/03/is-it-time-for-a-front-end-framework/)
 
 - [Pretty good series, covers everything react, separated with class/functional components](https://www.youtube.com/watch?v=QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3)
 
@@ -13,6 +13,8 @@
 - [HOCs are basically javascript closures, so I feel its more of a JS feature than React](https://www.youtube.com/watch?v=rsBQj6X7UK8&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=34)
 
 - [React or react-native do not actually require Node](https://stackoverflow.com/a/41839733/7930262)
+
+- [React native call methods on child component, rare requirement, anti pattern](https://medium.com/@nugen/react-hooks-calling-child-component-function-from-parent-component-4ea249d00740) and [when to use useImperitiveHandler](https://stackoverflow.com/questions/57005663/when-to-use-useimperativehandle-uselayouteffect-and-usedebugvalue)
 
 ## Notes
 
