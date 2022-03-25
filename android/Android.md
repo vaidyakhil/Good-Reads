@@ -288,6 +288,10 @@ override fun onCreate(...) {
 
 ### Gradle and build Processes
 
+* Maven: Is a project management tool / Build automation tool for java, and uses something called project object model which uses a xml file to store all configurations.
+* Maven repositories are where all the dependancies lib code is fetched from.
+* Gradle: Developed as enhancement to maven, takes care for runnnig tasks, dependaciy management, build automation etc.. It uses groovy for the project configuration files rather than xml based model as maven does.
+
 *	The build process has 3 phases: initialization, configuration and execution
 
 *	initialization involves gradle identifying multiple projects (read modules) that need to build
