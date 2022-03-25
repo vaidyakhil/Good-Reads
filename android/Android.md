@@ -12,12 +12,23 @@
 
 - [Gradle, Build system, phases of gradle build process](https://proandroiddev.com/understanding-gradle-the-build-lifecycle-5118c1da613f)
 
+- [Gradle Dependency Configurations: impl, compile etc...](https://medium.com/swlh/how-gradle-dependency-configurations-work-underhood-e934906752e5)
+
 - [implementation-vs-api-in-gradle](https://medium.com/mindorks/implementation-vs-api-in-gradle-3-0-494c817a6fa)
 
 - [classpath, gradle](https://stackoverflow.com/a/41571818/7930262))  
 
-- [interview prep](https://medium.com/@mohitdholakia4/interview-questions-for-android-developer-3a18e41ebcda)
+- [caching, exoplayer, videoplayer](https://medium.com/google-exoplayer/pre-caching-downloading-progressive-streams-in-exoplayer-3a816c75e8f6)
 
+- [caching, exoplayer, implementation](https://proandroiddev.com/video-preloading-precaching-using-exoplayer2-in-android-da340cc268d9) and [repo](https://github.com/iambaljeet/VideoPreLoading)
+
+- [Memory Leaks, GC](https://proandroiddev.com/everything-you-need-to-know-about-memory-leaks-in-android-d7a59faaf46a) and [Leak Canry usage](https://square.github.io/leakcanary/fundamentals-fixing-a-memory-leak/)
+
+- [threading, async task, handler-looper](https://www.youtube.com/watch?v=fZTJflHJoBY) and [this](https://www.youtube.com/watch?v=QfQE1ayCzf8&list=PLrnPJCHvNZuDl4WUKi26WbzLMsM1sXCD4&index=1)
+
+- [storage model, file system, sandboxing](https://medium.cobeisfresh.com/taming-file-storage-on-android-part-1-16756ce91182) and [article2](https://proandroiddev.com/storage-model-android-101-26bc8aef9609) and [official doc](https://developer.android.com/training/sharing/send)
+
+- [interview prep](https://medium.com/@mohitdholakia4/interview-questions-for-android-developer-3a18e41ebcda)
 
 ## Notes
 
