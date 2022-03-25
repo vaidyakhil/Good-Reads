@@ -327,4 +327,29 @@ class MyImpl: AsyncTask<String, Int, String> {
 
 	onProgressUpdate // will be called on UI thread every time 	publishProgress is called in doInBack..
 }
+```
+
+### Storage
+* **Internal storage**: when we say internal storage, we mean the app specific dir that is made for all apps, hidden from user
+* **Scoped Storage**:
+	* Unrestricted access to an application’s internal and external storage without any permission.
+	* Unrestricted access to built-in collections like audios, images and downloads.
+	* Reading and writing own files won’t require a permission.
+	* Reading files which our app don’t own requires READ_EXTERNAL_STORAGE permission.
+	* Reading/Writing outside any collection requires system picker.
+	* WRITE_EXTERNAL_STORAGE is deprecated since API Level 29 and has the same effect as READ_EXTERNAL_STORAGE if used.
+	* To access location metadata of a media file, ACCESS_MEDIA_LOCATION permission is required in Manifest file.
+
+* **Android Storage model**
+	* Android storage model has now been revamped to avoid asking users permission for storage access by providing some level of access by default. 
+	* Apps can now read/write into their app-specific directories without asking users. This gives apps scoped access to storage.
+	* Environment.getExternalStorageDirectory (now deprecated)
+		* Note: don't be confused by the word "external" here. This directory can better be thought as media/shared storage.
+		* It is a filesystem that can hold a relatively large amount of data and that is shared across all applications (does not enforce permissions).
+		* Traditionally this is an SD card, but it may also be implemented as built-in storage in a device that is distinct from the protected internal storage and can be mounted as a filesystem on a computer.
+
+* **SAF** 
+	* you don’t need any permissions if you’re trying to obtain any documents or other types of content when using Storage Access Framework.
+	* That’s because a user is involved in the process of selecting the actual content to work with.
+	
 
