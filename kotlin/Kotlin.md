@@ -44,3 +44,6 @@
 	visibility modifiers.
 *	open and final are "open for extension" modifiers that is if a class, member variable or function is available for
 	overriding, default is final in kotlin
+
+### Coroutines
+* a good practice is to use withContext to make sure every function is safe to be called on any Dispatcher including Main — that way the caller never has to think about what thread will be needed to execute the function

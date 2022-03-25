@@ -2,6 +2,12 @@
 
 * [Compiler-Interpreter](https://www.freecodecamp.org/news/compiled-versus-interpreted-languages/)
 
+* [airbnb sunsetting rn](https://medium.com/airbnb-engineering/sunsetting-react-native-1868ba28e30a)
+
+* [coin base goes full react native](https://blog.coinbase.com/announcing-coinbases-successful-transition-to-react-native-af4c591df971)
+
+* [Tool to Generate language specific type safe schema from json](https://quicktype.io/)
+
 ## Notes 
 
 ### Compiler-Interpreter
