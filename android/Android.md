@@ -1,0 +1,319 @@
+
+## Good Reads
+- [Android Architecture components, live data, lifecycle](https://medium.com/exploring-android/exploring-the-new-android-architecture-components-c33b15d89c23)
+
+- [Live data, official doc](https://developer.android.com/topic/libraries/architecture/livedata)
+
+- [Jetpack, AAC, data binding, live data, mvvm, view model (Excelent series for revision)](https://www.youtube.com/playlist?list=PLRKyZvuMYSIO0jLgj8g6sADnD0IBaWaw2)
+
+- [data binding, view binding](https://stackoverflow.com/a/58947344/7930262)
+
+- [Recycler view, listview, adapter, layout manager, excelent for revision](https://www.youtube.com/watch?v=ZqQuYgwrtAI&list=PLfuE3hOAeWhbmDA26ARjViSjTcOHSqpmT)
+
+- [Gradle, Build system, phases of gradle build process](https://proandroiddev.com/understanding-gradle-the-build-lifecycle-5118c1da613f)
+
+- [implementation-vs-api-in-gradle](https://medium.com/mindorks/implementation-vs-api-in-gradle-3-0-494c817a6fa)
+
+- [classpath, gradle](https://stackoverflow.com/a/41571818/7930262))  
+
+- [interview prep](https://medium.com/@mohitdholakia4/interview-questions-for-android-developer-3a18e41ebcda)
+
+
+## Notes
+
+### Basics:
+
+* 	The R Class
+	When your application is compiled the R class is generated. 
+	It creates constants that allow you to dynamically identify the various contents of the res folder, including layouts
+
+* 	setContentView (that we use to set layout of an activity in onCreate):
+	It inflates the layout.
+	Android reads your XML file and generates Java objects for each of the tags in your layout file.
+
+*	FrameLayouts are optimized to have a single child view, you can use it to position views absolutely
+	the order in which views are specified inside frame layout, they will render on top of one another
+	
+*	there are overflow menus in android which we can utilize to provide additional functionalities.
+	for activities to have them they need to override, methods like:
+	```
+		onCreateOptionsMenu // use menu inflator to inflate menu from a menu resource
+		onOptionsItemSelected // to implement click handlers
+	```
+
+*	The pixel density is the number of pixels within a physical area of the screen
+	and is referred to as dpi (dots per inch)
+* 	This is different from the resolution, which is the total number of pixels on a screen.
+*	dp (or dip) provides you with pixel density independence so that the UI looks the same physical size to user
+	independent of the pixel density of their device.
+*	Base pixel density in android is 160 dpi (160 pixels/ dots per inch). (This was dpi for first android device)
+*	Now to maintain the physical size, we use dp (or dip) which scales as follow:
+	```
+	px = ((dp) * (dpi)) /160; // for base density 1 dp = 1 pixel
+	```
+
+* 	Explicit intents: constructor takes context and ref to the classname of the activity requested
+*	Implicit intents: constructor takes action type (Intent.ACTION_VIEW), and data
+*	use Uri.Builder class to generate uri, rather than using string concatenation for uris. [res](https://classroom.udacity.com/courses/ud851/lessons/12055b5c-5e3a-42c6-9f8b-c02daf3d0d7d/concepts/944a58a9-4bb9-4797-91d7-949393ba2305)
+*	A url is a uri that identifies network resource
+
+### SDK versions:
+*	minSdk version:
+	Google Play won’t show your app on devices running an Android platform version lower than your minimum SDK version
+	You need to balance the opportunity of expanding your audience, with the cost of supporting those users
+*	targetSdk version:
+	is NOT a high pass filter -- it’s used only to declare which platform version you've tested your app on
+
+### Activity LifeCycle
+
+*	Android activity undergoes several phases of lifecycle events 
+	and developer gets to hook into these lifecycle events by overriding lifecycle event methods
+	```
+		onCreate: 	begining of lifecycle, instance is created, initialize, perform viewbinding, fetch data here
+
+		onRestart: 	called when once onStop has been called and activity again becomes visible
+
+		onStart: 	called when activity becomes visible to user
+
+			onResume: 	called when activity is in foreground, i.e receiving events, interacting with user
+
+			~onPause:	called when activity goes in background,
+						i.e still visible but overlapped by other component (dialog / bottomsheet)
+						interacting with Notification tray does NOT pause activity.
+
+			~onSaveInstanceState: called when activity is about to be destroyed, after onPause
+
+		~onStop: activity is not visible now, user navigated to other activity/ pressed home etc.
+
+	~onDestroy: end of lifecycle, clean up phase, release resources here
+	```
+
+### OnSavedInstance
+- onSavedInstanceState and onRestoreInstanceState when your activity is killed due to some OS process and 
+	not user intentional eg. orientation change or OS freeing up memory by clearing out activities in background
+
+- in such cases your activity goes under RECREATION and then these callbacks are called.
+
+- onSavedInstanceState ->called after onPause in such cases ^^ 
+	onRestoreInstanceState -> called after onStart after the recreation of activity in such cases ^^
+
+### Task affinity launch modes
+
+ - A task is nothing but a stack of activities, when we press the button which displays recent apps, then button actually displays all the running tasks, so if from same app we launch an activity as single task it will be shown as separate task in the recent app display.
+ - Activity can have different launch modes
+	 - standard (default)
+	add instance to the top of the stack of the same task, no matter if an existing instance exist in stack or not.
+	- single top
+	if an activity is on top of stack, and we try to add another instance on top, do not add new instance (SINGLE TOP)
+	- single task
+	activity if given a separate affinity (like a pacakge name in manifest), it will always launch in a separate task and in that task if there are some activities on top of a single task activity, OS will remove all those on top and reuse the existing instance
+
+- Launch modes can be programatically controlled using intent flags
+
+ ### RecyclerView
+There are 3 components to a recycler view:
+*	**Layout manage**r: this controls how the all the items would be laid out, 
+	linear vertical/horizontal fashion, grid fashion or staggered fashion
+*  **Adapter** which controls what data to bind with
+	what position's item and what type of view to bind with exposes 
+	onCreateViewHolder and onBindViewHolder APIs:
+	*	onCreateViewHolder: return the view holder instance in which we do the findViewById() stuff (costly operation)
+	*	 Once view holder instance is created for a position, from next time onwards, same instance is used and not created a new one, this avoids lot of expensive operations and layout inflation, findV.. etc..
+	*	next onBindViewHolder is called, where you bind the view with the data, setText(...) stuff.
+	> what the adapter is doing is instead of creating 80 view instances in memory for the 80 items in the list,
+	it is creating only 10 such instances in memory that are enough to cover the whole screen
+	> Once the user scrolls, we bind the data of new item to the existing instances for which we had references in memory.
+	>	This saves a lot of memory in case of a large list and 
+	also saves a lot of lookups (find view by id) calls into our view heirarchy,
+	since we have cached these references by using view holder class instances for the 10 views
+
+		
+*	**Recycler**, this comunicates with both adapter and layout manager
+	and decides when to use same holder and when to create new.
+
+### Permissions:
+
+*	permissions on the platform exist solely for 2 reasons: restrict data, restrict actions of an app.
+
+*	There are install time permissions ("normal"), which an app store will display users at the time of install
+	ACCESS_NETWORK_STATE
+
+*	Then there are run time permissions ("dangerous"), require your app to explicitly get user consent at run time
+	ACCESS_BACKGROUND_LOCATION
+
+* 	In either case you have to declare those permissions in manifest
+
+ ### LiveData
+ *	it is a kind of observable data holding class, but with super powers! it is lifecycle aware and 
+	hooks into the lifecycle of the owner of the observer.
+*	Now the Observer here is not to be confused with LifeCycleObserver, THE OBSERVER HERE IS AN
+	INTERFACE THAT IMPLEMENTS ONCHANGE FUNCTION.
+*	Live data sends update to only active observers, i.e whenever an observer's owner's lifecycle ends,
+	live data
+	unsubscribes the observerer, this fixes memory leaks issues.
+*	Live Data is an abstract class with setValue and postValue as private methods
+*	We use mutable live data class which extends live data and exposes set and post api
+*	set is supposed tobe called from UI Thread, post can be called from Bg threads.
+*	There is a common pattern around how to keep the mutable data as private and still allow the view layer to access the
+	live data. eg:
+	```kotlin
+    /**
+	 * VIEW MODEL
+     * Request a snackbar to display a string.
+     *
+     * This variable is private because we don't want to expose MutableLiveData
+     *
+     * MutableLiveData allows anyone to set a value, and MainViewModel is the only
+     * class that should be setting values.
+     */
+    private val _snackBar = MutableLiveData<String?>()
+
+    /**
+     * Request a snackbar to display a string.
+     */
+    val snackbar: LiveData<String?>
+        get() = _snackBar
+
+
+    /*
+    * ACTIVITY
+    */
+	viewModel.snackbar.observe(this) { text -> ... }
+	```
+
+### LifeCycle
+*	LifeCycleOwner is an interface that implements getLifeCycle method, this method returns an object
+	of class Lifecycle which exposes current state and state change events etc..
+*	Activities and fragments do implement this. :)
+*	LifeCycleObserver  is an interface that does not implement any method but uses methods with annotation 
+	( @OnLifecycleEvent now deprecated ) to hook into a lifecycle events.
+*	Fragments outlive there views life, hence we should assign null to any reference of a view that we might 
+	be keeping in fragement, in the onDestroyView method (Menu fragment in UC)
+
+*	since view model outlives life cycle of  the view associated with it, do not keep ref of view in 
+	viewModel as it might result in memory leaks
+	(view can be garbage collected but there is a ref to it in Vm).
+
+```kotlin
+//	Activity:
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    lifecycle.addObserver(SampleLifeCycleObserver())
+    setContentView(R.layout.activity_single_task)
+    Log.d(TAG, "onCreate: of Activity is called")
+}
+
+// 	SampleLifeCycleObserver:
+class SampleLifeCycleObserver: DefaultLifecycleObserver {
+    private val TAG = "LifeCycle"
+    override fun onCreate(owner: LifecycleOwner) {
+        super.onCreate(owner)
+        Log.d(TAG, "onCreate: of observer is called")
+    }
+
+    override fun onResume(owner: LifecycleOwner) {
+        super.onResume(owner)
+        Log.d(TAG, "onResume: of observer is called")
+    }
+}
+```
+
+### JETPACK
+
+*	it is a suite of libraries, that are individually adoptable, buildable (see assets/android_jetpack)
+*	collection of libs that aim to allow to build testable, maintainable, robust app is called architecture components
+*	this includes data-binding, live-data, view-model, lifecycle ...
+*	google recommends use of MVVM architecture along with JetPack, to build apps
+
+### BINDING
+*	There are 2 types of "binding" that we do in android, view-binding, data-binding
+*	View Binding: once you enable this for a module, for every layout in that module, a binding file is generated
+	PascalCaseLayoutFileNameBinding.java.
+*	Through this file, you have access to all the views with proper type checked, null safe references in comparison
+	to using findViewById which can result in null pointer exceptions
+
+### DATA BINDING (more important one)
+*	Data binding = Binding data (from code) to views + ViewBinding (Binding views to code) 
+*	This allows you to tie your views with the data source (1 way binding) and (2 way also)
+*	data binding allows you to get rid of all the boiler plate code of finding views and setting there properties in
+	activities.
+*	data binding when used along with live data can reduce boiler plate code to minimal and code will be very easy
+	to understand and maintain.
+	STEPS:
+	- enable dataBinding in build file for the module
+	- wrap your layouts in <layout> tag, this tells the compiler to create databinding for this layout (real time)
+	- now you add a <data> tag in your example, give a name to the variable and specify a type
+	- this variable you can access across the xml, eg = text:"@{variable.some_property}"
+	- In your activity's onCreate, you set the contentView using DataBindingUtil class 
+		(part of the lib), which returns the binding obj, 
+		binding.variable = dataSource // dataSource can be ViewModel here.
+	- when you use data binding with live data, you have to set the lifecyle owner of the binding also, else it 
+	   won't receive updates.
+   	- for 2 way data binding, eg. of editext (user types -> update live data -> update associated views),
+   	   syntax: 
+   	   ```
+   	   text: "@={dataSource}"
+   	   ```
+```kotlin
+/*
+* Activity
+*/
+override fun onCreate(...) {
+	super...
+	binding = DataBindingUtil.setContentView(...)
+	viewModel = ViewModelProvider(this, ViewModelFactory(view model's params), ....)
+
+	binding.variableName = viewModel
+	binding.lifecyleOwner = this // this ensures that whenever there is an update in data, binding.variableName gets the update notification from live data and ui updates
+}
+```
+  
+  
+#### There seems to be some kind of classification called android application components and these four are those
+*	activity
+*	service
+*	broadcast receiver
+*	content provider
+
+### Gradle and build Processes
+
+*	The build process has 3 phases: initialization, configuration and execution
+
+*	initialization involves gradle identifying multiple projects (read modules) that need to build
+*	These are specified in settings.gradle
+*	The configuration phase involves creation of a DAG of task dependencies 
+*	(tasks) are basically steps that need to be exceuted in the build process.
+*	compiling source code, generating class files etc. are some examples.
+
+*	The dependencies mentioned in buildscript block are not project dependecies but the build script dependecies, 
+*	the script needs them to be able to run.
+*	These are generally added using the classpath keyword
+
+* 	The project dependencies are added using the "compile"(deprecated), "implementation" and "api" keywords
+*	compile was deprecated -> api keyword does the same
+*	implementationn vs api, well api leaks the internal dependencies of a library to the client, increasing compile time, if the internal lib is changed.
+
+### Threading
+
+*	Android needs to maintain 60 FPS and for that main thread needs to be off loaded as much as possible.
+	That is the main reason, we use threading in android.
+
+*	AsyncTask is deprecated now.
+*	It showed a number of issues and did not offer much benefit over direct use of Executers.
+*	AsyncTask gives a general interface to get some work done on a background thread.
+*	TO use, we extend AsyncTask (Templatized types of  params, progress and result) class.
+*	Override doInBackGround method to describe the task.
+*	After that execute(...params) can be called on UI thread.
+```
+myImpl.execute(param1, param2, param3, param4);
+
+class MyImpl: AsyncTask<String, Int, String> {
+	onPreExecute // will be executed on UI thread
+
+	doInBackGround // does the task in background
+
+	onPostExecute // after task is done this is called on UI thread
+
+	onProgressUpdate // will be called on UI thread every time 	publishProgress is called in doInBack..
+}
+
