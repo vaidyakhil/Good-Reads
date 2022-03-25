@@ -14,7 +14,9 @@
 
 - [React or react-native do not actually require Node](https://stackoverflow.com/a/41839733/7930262)
 
-- [React native call methods on child component, rare requirement, anti pattern](https://medium.com/@nugen/react-hooks-calling-child-component-function-from-parent-component-4ea249d00740) and [when to use useImperitiveHandler](https://stackoverflow.com/questions/57005663/when-to-use-useimperativehandle-uselayouteffect-and-usedebugvalue)
+- [React call methods on child component, rare requirement, anti pattern](https://medium.com/@nugen/react-hooks-calling-child-component-function-from-parent-component-4ea249d00740) and [when to use useImperitiveHandler](https://stackoverflow.com/questions/57005663/when-to-use-useimperativehandle-uselayouteffect-and-usedebugvalue)
+
+- [Webpack and babel, why used](https://www.reddit.com/r/reactjs/comments/aw5qmn/are_babel_and_webpack_necessary_for_react/?utm_source=share&utm_medium=web2x&context=3)
 
 ## Notes
 
@@ -103,7 +105,7 @@ and also persist value through subsequent re renders.
 * We cannot pass an async fn, into useEffect as, the param is expected to either return a cleanup fn or NOTHING, but async fn(s) implicitly return a promise.
 * To work around this, we can define an async fn inside first param and call it in use effect. that fn can use await, and set the state after receiving response
 
-### React Context
+### React Context API
 * React Context provides a way to avoid prop drilling, i.e passing props deep down the heirarchy. Context is similar to a global object + react powers, whenever it changes components below it rerender.
 
 * There can be multiple context providers, a provider allows all the components below it to access what it has to provide.
@@ -124,6 +126,7 @@ and also persist value through subsequent re renders.
 * your whole application can be served as a js script from a cdn, in a html page,
 * but the benfits node offers: use of bundlers such as web-pack,
 * use of transpilers making use of jsx possible, etc.. far outweigh the option of not using Node.
+* Code written in React can coexist peacefully with markup rendered on the server by something like PHP, or with other client-side libraries. In fact, this is exactly how React is being used at Facebook.
 
 ### Build Tools
 
