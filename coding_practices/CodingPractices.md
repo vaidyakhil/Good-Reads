@@ -16,6 +16,42 @@ indenting and nested loops. They have long argument lists. The names are arbitra
 
 * Any comment that forces you to look in another module for the meaning of that comment has failed to communicate to you and is not worth the bits it consumes
 
+* Procedural code makes it hard to add new data structures because all the functions must
+change. OO code makes it hard to add new functions because all the classes must change
+
+*the idea that everything is an object  is a myth. Sometimes you really do want simple data structures with procedures operating on them*
+
+* author differentiates object(entities) and data-structure (data classes) from one another in the sense that objects abstract away there internals and expose behaviourial methods that can operate on internals:
+
+```java
+/* object */
+public interface Point {
+	double getX();
+	double getY();
+	void setCartesian(double x, double y);
+	double getR();
+	double getTheta();
+	void setPolar(double r, double theta);
+}
+
+/* data structure */
+public class Point {
+	public double x;
+	public double y;
+}
+
+/*
+* The beauty of object above is there is no way you can tell whether the
+* implementation is in rectangular or polar coordinates.
+* It might be neither! And yet the interface still unmistakably represents a data structure.
+
+* But it represents more than just a data structure.
+* The methods enforce an access policy.
+* You can read the individual coordinates independently, but you must set the coordinates together as an atomic operation
+*/
+```
+
+
 ### Functional Programming
 * Functional way adheres to the pure functions concept, functions should neither affect nor should their output depend on factors outside there scope.
 * this makes code more unit testable.
