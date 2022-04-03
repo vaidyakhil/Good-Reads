@@ -51,6 +51,10 @@ public class Point {
 */
 ```
 
+* wrapping third-party APIs is a best practice. When you wrap a third-party API, you minimize your dependencies upon it: You can choose to move to a different library in the future without much penalty. Wrapping also makes it easier to mock out third-party calls when you are testing your own code
+
+* If you are tempted to return null from a method, consider throwing an exception or returning a S PECIAL CASE object instead. If you are calling a null-returning method from a third-party API, consider wrapping that method with a method that either throws an exception or returns a special case object
+
 
 ### Functional Programming
 * Functional way adheres to the pure functions concept, functions should neither affect nor should their output depend on factors outside there scope.
