@@ -6,6 +6,15 @@
 
 ## Notes
 
+### Overview
+* Initially JS was something that **could be ran into browsers** to make websites more interactive, thats all.
+* "Spider Monkey" was the engine that interpreted JS and made it something browsers could understand.
+* Then came V8 engine with chromium based browsers, which later google open-sourced.
+* Someone successfully took V8 out of the browser and exposed C++ APIs to V8 to make system calls.
+* This enviromnent is called NodeJs, it exposes C++ APIs to V8 engine to make system calls, eventually allowing JS to run on physical machines.
+
+
+
 ### NPM and NPX
 * npm the package manager for node comes with it and with it comes another command line utility npx.
 * npx lets u execute packages without installations (the package should be part of npm pacakges).
