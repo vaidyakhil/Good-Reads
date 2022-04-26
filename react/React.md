@@ -94,6 +94,7 @@
  and if they differ, only then re-renders.
 
 * For functional components, we can use React.memo and wrap our component with it, to do the same, if its props are changing only then re render it.
+[codesandbox for React.memo](https://codesandbox.io/s/react-passing-functions-as-props-pwrfz6?file=/src/App.js)
 
 * useRef can be used to 
 	* have direct ref to DOM nodes
