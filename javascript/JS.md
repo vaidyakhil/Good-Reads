@@ -155,6 +155,22 @@ display(); // Saurabh
   This allows to implement FactoryMethod kind of design.
 
   Downside is that it holds the reference to all the varibles and fns of its lexical scope which cannot garbage collected, until the function returned has no reference.
+  
+* **Import / Export**
+	This import declaration:
+	```js
+	import {join} from 'lodash';
+	```
+	brings in the entire lodash file, all 70K.
+	
+	**VS**
+	
+	this:
+	```js
+	import join from  'lodash/join'
+	```
+	brings in just the `join` module, which is less than 1K.
+
 
 
 
