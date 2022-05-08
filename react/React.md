@@ -18,6 +18,8 @@
 
 - [Webpack and babel, why used](https://www.reddit.com/r/reactjs/comments/aw5qmn/are_babel_and_webpack_necessary_for_react/?utm_source=share&utm_medium=web2x&context=3)
 
+- [POC: how React Hooks work under the hood](https://indepth.dev/posts/1220/under-the-hood-of-react-hooks) 
+
 ## Notes
 
 ### React being faster (analysis)
