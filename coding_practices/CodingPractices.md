@@ -4,6 +4,7 @@
 * [Dependency inversion, solid principle](https://medium.com/@kedren.villena/simplifying-dependency-inversion-principle-dip-59228122649a)
 * [GREAT ARTICLE -> Interfaces, java](https://dev.to/gaurang847/do-you-really-understand-interfaces-1g7l)
 * [GREAT ARTICLE -> system design bird's eyeview, robert theon](https://robertheaton.com/2020/04/06/systems-design-for-advanced-beginners/)
+* [A POV for mono-repo](https://danluu.com/monorepo/)
 
 
 ## Notes
