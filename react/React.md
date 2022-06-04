@@ -20,6 +20,10 @@
 
 - [POC: how React Hooks work under the hood](https://indepth.dev/posts/1220/under-the-hood-of-react-hooks) 
 
+- [React CodeBase Walkthrough series](https://dev.to/fromaline/deep-dive-into-react-codebase-ep1-prerequisites-33ak)
+
+- [why react was born, intereting talk, Tom Occhino, react.js conf](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&t=89s) 
+
 ## Notes
 
 ### React being faster (analysis)
