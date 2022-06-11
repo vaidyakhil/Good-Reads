@@ -23,6 +23,8 @@
 
 - [flatlist, optimizations, performance](https://codingislove.com/optimize-react-native-flatlist-performance/)
 
+- [Decoupling native apps and React native](https://youtu.be/zHVSR7iBCy0?t=11649) 
+
 
 ## Notes
 
