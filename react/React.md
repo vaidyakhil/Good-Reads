@@ -22,7 +22,9 @@
 
 - [React CodeBase Walkthrough series](https://dev.to/fromaline/deep-dive-into-react-codebase-ep1-prerequisites-33ak)
 
-- [why react was born, intereting talk, Tom Occhino, react.js conf](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&t=89s) 
+- [why react was born, intereting talk, Tom Occhino, react.js conf](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&t=89s)
+
+* [Great Read: Understanding Redux internals by Mark Erikson](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/#development-history-of-the-react-redux-api)
 
 ## Notes
 
@@ -148,3 +150,13 @@ and also persist value through subsequent re renders.
 * webpack is a bundler, which allows us to write clean maintainable modular code 
   and still serve the client with a single (maybe multiple) bundle file.
 
+
+### Mental Model for Redux
+* I used to think a lot how redux( or any state management lib for that matter) is able to notify just the react component,that needs the particular update.
+
+* Is there some kind of event emitter logic that JS provides and these libs are using.
+
+* `Great Read: Understanding Redux internals by Mark Erikson` article at the top clarifies a lot,
+	* how redux maintains a list of listeners and notifies **all of them** whenever an action is dispatched. 
+	* how `connect` HOC from `react-redux` abstracts out, subscription, unsubscription to store, and triggering re-render logic from React Components.
+	* Specifically the simplified implementation of 		`createStore` and `connect` are very helpful for a mental model
