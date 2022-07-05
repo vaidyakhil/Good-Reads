@@ -6,6 +6,7 @@
 * [GREAT ARTICLE -> system design bird's eyeview, robert theon](https://robertheaton.com/2020/04/06/systems-design-for-advanced-beginners/)
 * [A POV for mono-repo](https://danluu.com/monorepo/)
 * [frontend arch, pitfalls, good practices, great talk](https://www.youtube.com/watch?v=zDPLs9TPDYk&t=13191s)
+* [Basic RESTful API introduction](https://www.ibm.com/cloud/learn/rest-apis)
 
 
 ## Notes
