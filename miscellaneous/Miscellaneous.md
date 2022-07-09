@@ -10,6 +10,8 @@
 
 * [What is Firebase, different services, it offers and other stuff](https://medium.com/firebase-developers/what-is-firebase-the-complete-story-abridged-bcc730c5f2c0)
 
+* [Setup multiple git users on a machine](https://dev.to/fedekau/automatically-managing-personal-and-work-git-configurations-27ad)
+
 ## Notes 
 
 ### Compiler-Interpreter
