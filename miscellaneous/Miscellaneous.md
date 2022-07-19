@@ -12,6 +12,8 @@
 
 * [Setup multiple git users on a machine](https://dev.to/fedekau/automatically-managing-personal-and-work-git-configurations-27ad)
 
+* [Detailed Explanation: CI/CD pipelines for React Native Application](https://medium.com/@paramsingh_66174/ci-cd-pipeline-for-react-native-apps-98246237e29d)
+
 ## Notes 
 
 ### Compiler-Interpreter
