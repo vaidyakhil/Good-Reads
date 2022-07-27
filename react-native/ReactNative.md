@@ -50,6 +50,7 @@
 	* JS Thread: buisness logic
 	* Shadow node thread: This is thread which does all the calculations where to render a view what size etc from the data sent from JS thread
 * After calculating it conveys it to the Main thread.  ref (`.res/rn_old_arch` )
+* To avoid a rn package in a certain platform, we can have `react-native.config` at project's top level and config that package to be not included in build process for that platform. [ref this](https://stackoverflow.com/users/856823/johnny-c)
 
 
 ### New Architecture (`.res/rn_new_architecture`)
