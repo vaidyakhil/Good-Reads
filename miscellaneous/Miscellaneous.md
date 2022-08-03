@@ -20,6 +20,8 @@
 
 * [Pitfalls of git rebase, difficult debugging etc](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1)
 
+* [Visualization for different merge strategies](https://github.com/goharbor/harbor/discussions/16810#discussioncomment-2758668)
+
 ## Notes 
 
 ### Compiler-Interpreter
