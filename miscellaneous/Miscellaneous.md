@@ -14,6 +14,12 @@
 
 * [Detailed Explanation: CI/CD pipelines for React Native Application](https://medium.com/@paramsingh_66174/ci-cd-pipeline-for-react-native-apps-98246237e29d)
 
+* [Beginner: git rebase interactive](https://hackernoon.com/beginners-guide-to-interactive-rebasing-346a3f9c3a6d)
+
+* [Beginner: git merge vs rebase](https://www.youtube.com/watch?v=CRlGDDprdOQ)
+
+* [Pitfalls of git rebase, difficult debugging etc](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1)
+
 ## Notes 
 
 ### Compiler-Interpreter
