@@ -52,6 +52,15 @@
 
 * JDK contains JRE + development tools (debugger linter etc...)
 
-* Why UUID(s) are used in case of database entries: the sequential approach doesn’t work well in any kind of distributed system, because it means that **INSERT** commands must be executed one by one. This restriction can cause major performance issues at scale. 
+* Why UUID(s) are used in case of database entries: the sequential approach doesn’t work well in any kind of distributed system, because it means that **INSERT** commands must be executed one by one. This restriction can cause major performance issues at scale.  
+
+* UUIDs solve all of these problems because:
+	* They’re globally unique, so the chances of encountering a duplicate ID even in external data are very, very small.
+	* They can be generated without the need to check against a central node, so in a distributed system, each node can generate UUIDs autonomously without fear of duplication or consistency issues.
+
+
+Reason #1 alone is a good argument for using UUIDs in almost any database system. As a business that aspires to operate at scale, reason #2 is also very relevant to our bookshop, because distributed databases offer the best scalability and resilience
+
+
 
 
