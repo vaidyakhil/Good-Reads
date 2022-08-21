@@ -52,4 +52,6 @@
 
 * JDK contains JRE + development tools (debugger linter etc...)
 
+* Why UUID(s) are used in case of database entries: the sequential approach doesn’t work well in any kind of distributed system, because it means that **INSERT** commands must be executed one by one. This restriction can cause major performance issues at scale. 
+
 
