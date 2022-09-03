@@ -22,6 +22,8 @@
 
 * [Visualization for different merge strategies](https://github.com/goharbor/harbor/discussions/16810#discussioncomment-2758668)
 
+* [Canvas Rendering: Google Docs](https://medium.com/young-coder/the-future-web-will-canvas-rendering-replace-the-dom-847be872884c)
+
 ## Notes 
 
 ### Compiler-Interpreter
