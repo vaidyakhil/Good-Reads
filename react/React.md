@@ -26,7 +26,16 @@
 
 * [Great Read: Understanding Redux internals by Mark Erikson](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/#development-history-of-the-react-redux-api)
 
+* [Great Talk: Reconciliation, Virtual DOM, React Crux](https://youtu.be/i793Qm6kv3U)
+
+* [Great Talk: Destructuring React, Live Code, Tajas Kumar](https://www.youtube.com/watch?v=f2mMOiCSj5c)
+
 ## Notes
+
+### Rendering and whats underneath
+* [Crux of react](https://youtube.com/clip/UgkxPotmh_hYX4vOL_eWUOpr7WiXoUODajYK) is the diffing process & the expressive way in which we can create UI
+	1. The diffing process, makes sure it is not developer's jo to interact with DOM and initate paints. React takes care of what to repaint and batching these paint calls.
+	2. React just works with the diffing of V-DOM (javascript object (not JSON to be correct)), it does not make assumption that you are rendering HTML with the V-DOM; that's how React-Native is possible!	
 
 ### React being faster (analysis)
 * Conclusion of why react is "faster" is as follows:
