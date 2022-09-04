@@ -24,6 +24,10 @@
 
 * [Canvas Rendering: Google Docs](https://medium.com/young-coder/the-future-web-will-canvas-rendering-replace-the-dom-847be872884c)
 
+* [Flutter's rendering model](https://docs.flutter.dev/resources/architectural-overview#flutters-rendering-model)
+
+* [Cross Platform Dev: Flutter and React Native -> Architectural Differences](https://www.g2i.co/blog/flutter-vs-react-native-the-core-differences)
+
 ## Notes 
 
 ### Compiler-Interpreter
@@ -63,6 +67,12 @@
 
 Reason #1 alone is a good argument for using UUIDs in almost any database system. As a business that aspires to operate at scale, reason #2 is also very relevant to our bookshop, because distributed databases offer the best scalability and resilience
 
+### Cross-Platform Development
 
+* Cross-platform frameworks typically work by creating an abstraction layer over the underlying native Android and iOS **UI libraries**, attempting to smooth out the inconsistencies of each platform representation.
 
+* App code is often written in an interpreted language like JavaScript, which must in turn interact with the Java-based Android or Objective-C-based iOS system libraries to display UI.
 
+* All this adds overhead that can be significant, particularly where there is a lot of interaction between the UI and the app logic
+
+* By contrast, Flutter minimizes those abstractions, **bypassing the system UI widget libraries** in favor of its own widget set. The Dart code that paints Flutter’s visuals is compiled into native code, which uses Skia for rendering
