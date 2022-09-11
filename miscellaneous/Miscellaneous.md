@@ -10,18 +10,6 @@
 
 * [What is Firebase, different services, it offers and other stuff](https://medium.com/firebase-developers/what-is-firebase-the-complete-story-abridged-bcc730c5f2c0)
 
-* [Setup multiple git users on a machine](https://dev.to/fedekau/automatically-managing-personal-and-work-git-configurations-27ad)
-
-* [Detailed Explanation: CI/CD pipelines for React Native Application](https://medium.com/@paramsingh_66174/ci-cd-pipeline-for-react-native-apps-98246237e29d)
-
-* [Beginner: git rebase interactive](https://hackernoon.com/beginners-guide-to-interactive-rebasing-346a3f9c3a6d)
-
-* [Beginner: git merge vs rebase](https://www.youtube.com/watch?v=CRlGDDprdOQ)
-
-* [Pitfalls of git rebase, difficult debugging etc](https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1)
-
-* [Visualization for different merge strategies](https://github.com/goharbor/harbor/discussions/16810#discussioncomment-2758668)
-
 * [Canvas Rendering: Google Docs](https://medium.com/young-coder/the-future-web-will-canvas-rendering-replace-the-dom-847be872884c)
 
 * [Flutter's rendering model](https://docs.flutter.dev/resources/architectural-overview#flutters-rendering-model)
