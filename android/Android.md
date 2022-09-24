@@ -30,6 +30,8 @@
 
 - [interview prep](https://medium.com/@mohitdholakia4/interview-questions-for-android-developer-3a18e41ebcda)
 
+- [Hiding Secrets in Android](https://rammic.github.io/2015/07/28/hiding-secrets-in-android-apps/)
+
 ## Notes
 
 ### Basics:
