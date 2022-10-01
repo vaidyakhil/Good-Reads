@@ -16,6 +16,8 @@
 
 * [Cross Platform Dev: Flutter and React Native -> Architectural Differences](https://www.g2i.co/blog/flutter-vs-react-native-the-core-differences)
 
+* [Secure Data Transfer: Hashing and Encryption](https://cheapsslsecurity.com/blog/explained-hashing-vs-encryption-vs-encoding/)
+
 ## Notes 
 
 ### Compiler-Interpreter
@@ -64,3 +66,15 @@ Reason #1 alone is a good argument for using UUIDs in almost any database system
 * All this adds overhead that can be significant, particularly where there is a lot of interaction between the UI and the app logic
 
 * By contrast, Flutter minimizes those abstractions, **bypassing the system UI widget libraries** in favor of its own widget set. The Dart code that paints Flutter’s visuals is compiled into native code, which uses Skia for rendering
+
+
+### Secure Communication
+
+* When two parties communicate, there are some concerns from Security point of view:
+	1.  Identity Verification - able to verify that the message has been sent from trusted source
+	2.  Integrity - Able to verify that the message has not been tampered with
+	3. Confidentiality - Other than the concerned parties no one else is able to access the messages in intelligible manner
+
+* Hashing - using a hashing algo, generate a unique string from the message being sent. Sent the hash along with message. Receiver generates hash from what it receives. If it doesn't match, it means message has been tampered with. (Intigrity)
+* Encrypting - it is the process of transforming your confidential data into an unreadable format so that no hacker or attacker can manipulate or steal it. Thereby, serving the purpose of confidentiality
+*  SSL/TLS HandShakes - Which basically use symmetric and asymmetric cryptography for Identity and Verification and establishing a secure connection
