@@ -8,6 +8,8 @@
 
 * [Tool to Generate language specific type safe schema from json](https://quicktype.io/)
 
+* [JSON-Diff cool visualizer](https://jsoncrack.com/editor)
+
 * [What is Firebase, different services, it offers and other stuff](https://medium.com/firebase-developers/what-is-firebase-the-complete-story-abridged-bcc730c5f2c0)
 
 * [Canvas Rendering: Google Docs](https://medium.com/young-coder/the-future-web-will-canvas-rendering-replace-the-dom-847be872884c)
