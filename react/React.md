@@ -31,6 +31,8 @@
 
 * [What SSR is and how Suspense solves the related issues in react](https://github.com/reactwg/react-18/discussions/37)
 
+* [Interesting twitter thread where Dan_abramov is sharing thoughts around Next 13 release and react](https://mobile.twitter.com/dan_abramov/status/1585076899126345728)
+
 ## Notes
 
 ### Rendering and whats underneath
@@ -45,14 +47,14 @@
 
   1.  Point is react is eventually a framework that abstracts dev from direct manipulation of DOM, so inherently it must
       be using the same APIs that browser provides. So if "react" is able to make differential changes, browser must be able to too, if react is able to batch updates, browser must be too.
-  2.      React is not inherently faster, eventually it also uses the same DOM APIs to update the dom.
+  2.          React is not inherently faster, eventually it also uses the same DOM APIs to update the dom.
 
       It just do that in an efficient manner that we can do on our own as well using vanilla JS.
       The point being this framework standardizes the DOM update process by this "effiecient manner".
       So that the responsibility ofUpdate this ^^ does not rest with developer.
       One example of "efficient manner" is the batching of updates to DOM, so that instead of multiple render cycles of DOM (that involve repainting and reflow), updates are done in single instance.
 
-  3.      The virtual DOM is helpful in calculating the diff, (substantially, because eventually it is just a tree data
+  3.          The virtual DOM is helpful in calculating the diff, (substantially, because eventually it is just a tree data
       structure of plain javascript objects rather than a DOM tree).
       So everytime something changes, react "re-renders" the V-DOM (and not the actual DOM) then compares the with previous V-DOM (diffing) and based on the diffs, batches the DOM updates and sends to browser.
 
