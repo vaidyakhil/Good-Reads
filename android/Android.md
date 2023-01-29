@@ -42,6 +42,8 @@
 
 - [ART Twitter Thread](https://twitter.com/dhina17l/status/1618606564205801472)
 
+- [High level desscription of varius Gradle configuration files | groovy syntax | api vs implementation ](https://medium.com/gradeup/the-simplest-guide-to-understanding-gradle-758d9924e6ca)
+
 ## Notes
 
 ### Basics:
