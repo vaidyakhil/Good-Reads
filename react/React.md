@@ -171,3 +171,10 @@
 
 - webpack is a bundler, which allows us to write clean maintainable modular code
   and still serve the client with a single (maybe multiple) bundle file.
+
+### Hooks
+
+- With class components and their lifecycle methods we endup keeping unrelated blocks of code together and related code separated
+- For example, *components might perform some data fetching in componentDidMount and componentDidUpdate. However, the same componentDidMount method might also contain some unrelated logic that sets up event listeners, with cleanup performed in componentWillUnmount. Mutually related code that changes together gets split apart, but completely unrelated code ends up combined in a single method. This makes it too easy to introduce bugs and inconsistencies*.
+- To solve this, Hooks let you split one component into smaller functions based on what pieces are related (such as setting up a subscription or fetching data), rather than forcing a split based on lifecycle methods
+- Also prior to hooks react did not offer a way to reuse stateful logic, multiple components that need to do the same things have to do it on their own
