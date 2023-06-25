@@ -20,6 +20,12 @@
 
 * [Secure Data Transfer: Hashing and Encryption](https://cheapsslsecurity.com/blog/explained-hashing-vs-encryption-vs-encoding/)
 
+* [Scaling Up Engineering Teams |  Ranjan Sakalley - Scaler Podcast ](https://youtu.be/8Kazdjpf7oI)
+
+* [ UPI & India's Digital Payments Revolution | Rahul Chari - Scaler Podcast](https://youtu.be/oF5KB-INikc)
+
+* [Burnout, Taking Breaks & Engg. Management | SVS - Scaler Podcast](https://youtu.be/3iajCJXKlMs)
+
 ## Notes 
 
 ### Compiler-Interpreter
