@@ -26,6 +26,8 @@
 
 * [Burnout, Taking Breaks & Engg. Management | SVS - Scaler Podcast](https://youtu.be/3iajCJXKlMs)
 
+* [Evolution of UI frameworks and the design choices that came with them](https://youtu.be/r6ctxZphtkI) and pdf version of the same can be found [here](https://www.igalia.com/2023/07/18/Cross-Platform-Mobile-App-Frameworks-in-2023.html)
+
 ## Notes 
 
 ### Compiler-Interpreter
