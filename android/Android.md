@@ -44,6 +44,8 @@
 
 - [High level desscription of varius Gradle configuration files | groovy syntax | api vs implementation ](https://medium.com/gradeup/the-simplest-guide-to-understanding-gradle-758d9924e6ca)
 
+- [Medium: Understanding Gradle Files](https://medium.com/@wasyl/understanding-android-gradle-build-files-e4b45b73cc4c)
+
 ## Notes
 
 ### Basics:
