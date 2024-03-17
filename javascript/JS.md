@@ -208,3 +208,4 @@ testPassArrowImplicit(); // this prints undefined in non strict mode and errors 
 - So, in the build pipeline of a javascript / tpescript application, transpiling will be first step and then bundling.
 - Typescript comes with it's own transpiler called `tsc`.
 
+![Javascript Application's Build Pipeline](./res/js_build_pipeline.png)
