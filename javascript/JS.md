@@ -1,6 +1,7 @@
 ## GoodReads
 
 - [namaste js, great series](https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
+- [what and why of bundlers](https://sayanmondal342.medium.com/the-what-why-and-how-of-javascript-bundlers-f617f82aa09a)
 
 ## Notes
 
@@ -188,3 +189,22 @@ testPassArrowImplicit(); // this prints undefined in non strict mode and errors 
   ```
 
   brings in just the `join` module, which is less than 1K.
+
+### Bundlers
+
+- What are bundlers? Why do we need to bundle modular javascript application? before sending it to browser? Well, we don't **HAVE** to.
+- You can actually ship the modular javascript application as is to browsers and they'll be able to run it.
+- However, doing so would result in multiple network requests to fetch individual files. This is the main reason bundlers exist.
+- Bundlers are an optimization in order to reduce the required network bandwidth.
+- In addition, bundlers are also able recognize the unused code and strip it out.
+- Webpack is the most prominent bundlers out there, but there are new comers build in order to overcome the pitfalls of weback, eg. Parcel, esbuild, and ViteJS.
+- React Native's metro is also a bundler, build specifically to cater to the needs of a mobile environment.
+- Note: Bundlers are not transpilers
+
+### Transpilers
+- Transpilers are tools that convert code written in one language to another.
+- Generally they are not refered as compiler as they convert source code from one language to another at a similar level of abstraction (as opposed to converting to a lower-level language).
+- Generally this would be somthing like new typescript, javascript versions to widely supported javascripy versions.
+- So, in the build pipeline of a javascript / tpescript application, transpiling will be first step and then bundling.
+- Typescript comes with it's own transpiler called `tsc`.
+
